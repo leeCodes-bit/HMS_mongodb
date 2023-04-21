@@ -22,6 +22,3 @@
 ### Documentation
 - Document your API with postman
 
-
-# 2. Mongo Aggregation Exercise.
-- Go through the readme file in the Folder `MongoAggregation`
