@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="#">V<span style="color: red;">+</span> Hospital 🏥 </a>
+        <button
+          class="navbar-toggler d-none"
+          data-toggle="collapse"
+          data-target="#navcol-1"
+        >
+          <span class="sr-only">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="nav navbar-nav w-100 justify-content-center mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/">Signup/Login</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="/create">Create Report</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doctor/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="vh-100 gradient-custom-2">
+      <div class="container-fluid py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-12 col-xl-10">
+            <div class="card mask-custom">
+              <div class="card-body p-4 text-white">
+    
+                <div class="text-center pt-3 pb-2">
+                  <h2 class="my-4">Medical Reports</h2>
+                </div>
+
+                <table class="table text-white mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">Patient Name</th>
+                      <th scope="col">Age</th>
+                      <th scope="col">Hospital Name</th>
+                      <th scope="col">Weight(kg)</th>
+                      <th scope="col">Height</th>
+                      <th scope="col">Blood Group</th>
+                      <th scope="col">Genotype</th>
+                      <th scope="col">Blood Pressure</th>
+                      <th scope="col">HIV Status</th>
+                      <th scope="col">Hepatitis</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% reports.forEach((report)=> { %>
+                      <tr class="fw-normal">
+                        <td class="align-middle"><%=report.patientName%></td>
+                        <td class="align-middle"><%=report.age%></td>
+                        <td class="align-middle"><%=report.hospitalName%></td>
+                        <td class="align-middle"><%=report.weight%></td>
+                        <td class="align-middle"><%=report.height%></td>
+                        <td class="align-middle"><%=report.bloodGroup%></td>
+                        <td class="align-middle"><%=report.genotype%></td>
+                        <td class="align-middle"><%=report.bloodPressure%></td>
+                        <td class="align-middle"><%=report.HIV_status%></td>
+                        <td class="align-middle"><%=report.hepatitis%></td>
+                        <td class="align-middle d-flex">
+                          <a href="/update/<%= report._id %>" data-mdb-toggle="tooltip" title="Done" class="pr-3 badge bg-warning">Edit</a>
+                          <a href="/dashboard/<%= report._id %>" data-mdb-toggle="tooltip" title="Remove" class="badge bg-danger">Delete</a>
+                        </td>
+                      </tr> 
+                    <% }) %>
+                  
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
