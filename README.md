@@ -1,7 +1,3 @@
-# week-9-task-node
-
-# Task
-
 # 1. NO_SQL
 
 ### Implement this task using MongoDB
