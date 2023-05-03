@@ -1,24 +1,40 @@
-# 1. NO_SQL
+# REST API implementation
 
-### Implement this task using MongoDB
+### 1. Convert rest API of an Hospital Management System from an SQL database(SQLite) to a No-SQL database(mongodb)
+
+This is an app that enables health professional to take record of their patients and perform the basic CRUD operation.
+
+### 2. get the app running
+
+- Run yarn to install all dependencies.
+- Run yarn compile to transpile typescript.
+- Run yarn dev to start the app.
+
+### 3. Test the app
+
+- Run yarn test
+
+### 4. Tools used
+
+- Express.js
+- Mongodb.
+
+
 
 ### Clarification
-- Convert your week-6 task database into a NOSQL DB using `MONGODB`
-- Implement all functionalities as in the previous tasks
+- Used `MONGODB` as database
+- Implement all functionalities on CRUD
 - Implement pagination with limit of 5 values for each page`
 - Create Authentication and Authorization  using a middleware function
 - Implement Validation for incoming request using  **Joi or Zod**
 - Only registered users can access all `endpoints`
 - Containerize the app.
-- Use mongoDB-compass for local development
+- Used mongoDB-compass for local development
 
 ### Test Coverage (Test is mandatory. No tests equals zero(0) marks):
-- Test your database using mongodb-memory-server
-- Test all endpoints `(GET, POST, PUT, DELETE)`
-
-### Hosting
-- Host your application on Fly
+- Tested my database using mongodb-memory-server
+- Tested all endpoints `(GET, POST, PUT, DELETE)`
 
 ### Documentation
-- Document your API with postman
+- Documented APIs with postman
 
